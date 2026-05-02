@@ -15,8 +15,8 @@ public static class AndroidBuilder
 		PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, PackageName);
 		PlayerSettings.Android.bundleVersionCode = Mathf.Max(1, PlayerSettings.Android.bundleVersionCode);
 		PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel21;
-		PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARMv7 | AndroidArchitecture.ARM64;
-		PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.IL2CPP);
+		PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARMv7;
+		PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, ScriptingImplementation.Mono2x);
 
 		if (EditorUserBuildSettings.activeBuildTarget != BuildTarget.Android)
 		{
